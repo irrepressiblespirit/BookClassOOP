@@ -2,6 +2,11 @@ package com.viking.task2;
 
 public class Book {
 	
+	@Override
+public String toString() {
+	return "Book[ pages: "+pageCount+" parts: "+partCount+" author: "+author+" name: "+name+" binding: "+binding+" isbn: "+isbn+" price: "+price+" publishing: "+publishing+" year of publishing: "+yearOfPublishing;
+}
+	
 	public Book(int pc,int partC,String auth,String nm,String bind,String is,double pr,String pub,int year) {
 	this.pageCount=pc;
 	this.partCount=partC;

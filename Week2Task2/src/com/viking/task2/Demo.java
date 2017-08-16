@@ -17,6 +17,8 @@ public class Demo {
 		System.out.println("Add the book :");
 		System.out.println("Author: Bruce Eckel name: Thinking in java");
 		shelf.add(new Book(608,12,"Bruce Eckel","Thinking in java","hard","013-256",408.00,"OReally",2009));
+		shelf.add(new Book(599,11,"Mark Twain","Tom Sower adventures","hard","277-110",256.00,"Piter",2008));
+		System.out.println("--------------------------------------------------------------------------------------------------");
 		System.out.println("Books in alphabetical order (sorted by name):");
 		Arrays.sort(shelf.toArray(), new MyComparator());
 		Book[] arr=shelf.toArray();
@@ -25,18 +27,17 @@ public class Demo {
 		}
 		System.out.println("Find book by author Dan Brown-----------------------------------------------------------");
 		try {
-			Book[] book = shelf.findByAuthor("Dan");
-			System.out.println(book[0].getAuthor());
-			System.out.println(book[0].getName());
-			System.out.println("Find book by name Thinking in java-----------------------------------------------------");
+			Book[] book = shelf.findByAuthor("Dan Brown");
+			System.out.println(Arrays.deepToString(book));
+			System.out.println("Find book by name T...-----------------------------------------------------");
 			Book[] book2=shelf.findByName("T");
-			System.out.println(book2[0].getAuthor());
-			System.out.println(book2[0].getName());
+			System.out.println(Arrays.deepToString(book2));
 			
-			System.out.println("Find book by author Mark Twain");
-			Book[] book3=shelf.findByAuthor("Mark Twain");
+			System.out.println("Find book by author Lev Tolstoy");
+			Book[] book3=shelf.findByAuthor("lev");
 			System.out.println(book3[0].getAuthor());
 			System.out.println(book3[0].getName());
+			
 			
 		} catch (MathNotFoundException e) {
 			e.printStackTrace();
